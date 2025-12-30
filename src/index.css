@@ -1,0 +1,51 @@
+  @import "tailwindcss";
+
+html { scroll-behavior: smooth; }
+
+/* Theme tokens (use with bg-[color:var(--...)] etc.) */
+:root{
+  --bg: #07140D;
+  --fg: #F5F1E7;
+  --muted: rgba(245,241,231,.72);
+  --card: rgba(255,255,255,.06);
+  --card2: rgba(255,255,255,.09);
+  --bd: rgba(255,255,255,.10);
+  --acc: #D6B57A;
+  --acc2:#62AA78;
+  --shadow: 0 35px 120px rgba(0,0,0,.45);
+}
+
+:root[data-theme="ivory"]{
+  --bg: #FBF7EF;
+  --fg: #0B1B12;
+  --muted: rgba(11,27,18,.70);
+  --card: rgba(255,255,255,.75);
+  --card2: rgba(255,255,255,.92);
+  --bd: rgba(11,27,18,.10);
+  --acc: #B78B35;
+  --acc2:#1C7C54;
+  --shadow: 0 35px 120px rgba(10,20,14,.18);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes floaty {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@layer utilities{
+  .glass{
+    background: var(--card);
+    border: 1px solid var(--bd);
+    backdrop-filter: blur(14px);
+  }
+  .glass-strong{
+    background: var(--card2);
+    border: 1px solid var(--bd);
+    backdrop-filter: blur(16px);
+  }
+}
