@@ -107,7 +107,7 @@ export default function App() {
 
   const [theme, setTheme] = useState<Theme>(() => {
     const saved = localStorage.getItem("carehub_theme") as Theme | null;
-    return saved ?? "ivory";
+    return saved ?? "forest";
   });
   const [menu, setMenu] = useState(false);
 
@@ -574,7 +574,7 @@ export default function App() {
           </div>
 
           <div className="mt-10 border-t border-[color:var(--bd)] pt-6 text-center text-xs text-[color:var(--muted)]">
-            © {new Date().getFullYear()} CareHub • Premium Herbal Powders for Natural Beauty & Wellness
+            © {new Date().getFullYear()} CareHub • Premium Herbal Powders for Natural Beauty & Wellness  • Uday & Group
           </div>
         </motion.div>
       </section>
